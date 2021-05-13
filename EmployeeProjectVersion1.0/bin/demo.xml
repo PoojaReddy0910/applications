@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+<bean id="emp1" class="models.Employee">
+    <property  name ="id" value="101"></property>
+    <property  name="sname" value="emp@1"> </property>
+    <property name = "salary" value="150000"></property>
+    <property name = "commission" value="2000"></property>
+    <property name = "pfamount" value="1500"></property>
+    <property name ="pfpercentage" value="2"></property>
+    <property name="dep"  ref="dep1"></property>  
+   
+    
+    
+</bean>
+<bean id="dep1" class="models.Department">
+    <property  name ="deptid" value="1"></property>
+    <property  name="dname" value="dep@1"> </property>
+    
+       
+   
+    </bean>
+  
+    
+   
+ <!--<bean id = "emp" class="autowring.Employee" autowire="byName">
+ <property name="id" value="10" ></property>
+ <property name = "name" value = "pooja"></property>
+ <property name="dept" ref="dept1" ></property>
+  </bean>
+ <bean id = "dept1" class = "autowring.Department">
+ <property name ="deptId" value="01"></property>
+ <property name = "deptName" value="java"></property>
+ </bean>
+  -->
+
+ <!--  <bean id = "emp1" class="autotype.Employee1" autowire = "byType">
+ <property name="eid1" value="10" ></property>
+ <property name = "ename1" value = "pooja"></property>
+ <property name="dep1" ref="dept1" ></property>
+  </bean>
+ <bean id = "dept1" class = "autotype.Department1">
+ <property name ="deptid1" value="01"></property>
+ <property name = "dname1" value="java"></property>
+ </bean>
+ -->
+ <!--  <bean id = "emp1" class="constructormode.Employee2" autowire = "constructor">
+ <property name="empId" value="10" ></property>
+ <property  name = "empName" value = "pooja"></property>
+ 
+  </bean>
+ <bean id = "dept1" class = "constructormode.Department2">
+ <property  name ="DepId" value="01"></property>
+ <property name = "DepName" value="java"></property>
+ </bean>
+ -->
+ </beans>
